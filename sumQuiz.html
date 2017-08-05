@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Quiz App</title>
+  <link rel="stylesheet" type="text/css" href="sumQuiz.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div id="container">
+  <div id="welcomeScreen">
+    <h1>Sum Quiz</h1>
+    <button id="start">Start</button>
+  </div>
+  <div id="resetScreen">
+    <p>Try Again</p>
+    <p>Your score was <span id="finalScore">0</span>.</p>
+    <button id="restart">Restart</button>
+  </div>
+  <div id="runScreen">
+    <div id="progress-container">
+      <div id="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <p id="expression">7 + 7</p>
+    <p id="result">= 14</p>
+    <div id="button-container">
+      <button id="check"><i class="fa fa-check fa-5x"></i></button>
+      <button id="cross"><i class="fa fa-close fa-5x"></i></button>
+    </div>
+  </div>
+  <div id="currentScore">
+    <p>Score: </p>
+  </div>
+  </div>
+
+<script type="text/javascript" src="sumQuiz.js"></script>
+</body>
+</html>
+
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>

@@ -1,0 +1,222 @@
+#resetScreen, #runScreen, #currentScore p {
+  display: none;
+}
+
+/***************************
+/***** GENERAL
+/**************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background: #e96443;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  position: relative;
+  color: #555;
+}
+
+#container {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7f7f7;
+  border-radius: 4px;
+}
+
+
+/***************************
+/***** WELCOME SCREEN
+/**************************/
+#welcomeScreen {
+  text-align: center;
+  padding: 25%;
+  height: 100%;
+  /*background-color: #f7f7f7;*/
+  /*background-color: #d3d3d3;*/
+
+}
+
+#welcomeScreen h1 {
+  margin: 50px auto;
+  font-size: 42px;
+}
+
+#welcomeScreen button {
+  margin: 25px auto;
+  padding: 10px 30px;
+  border-radius: 200px;
+  background-color: #C85C62;
+  border: 1px solid #C85C62;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#welcomeScreen button:hover {
+  background-color: #e96443;/*#964f90;*/
+  border: 1px solid #e96443;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/***************************
+/***** RUN SCREEN
+/**************************/
+#runScreen {
+  text-align: center;
+}
+
+#runScreen #expression,
+#runScreen #result {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 72px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#button-container button {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  margin: 30px 10px;
+  cursor: pointer;
+}
+
+#check {
+  background-color: #25C76A;
+  border: none;
+  color: white;
+}
+
+#cross {
+  background-color: #FF5843;
+  border: none;
+  color: white;
+}
+
+#currentScore {
+  text-align: center;
+  font-size: 24px;
+  margin: 25px auto;
+}
+
+/***************************
+/***** RESET SCREEN
+/**************************/
+#resetScreen {
+  text-align: center;
+  padding: 25%;
+  height: 100%;
+  /*background-color: #f7f7f7;*/
+  /*background-color: #d3d3d3;*/
+
+}
+
+#resetScreen p {
+  margin: 20px auto;
+  font-size: 24px;
+}
+
+#resetScreen button {
+  margin: 25px auto;
+  padding: 10px 30px;
+  border-radius: 200px;
+  background-color: #C85C62;
+  border: 1px solid #C85C62;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#resetScreen button:hover {
+  background-color: #e96443;/*#964f90;*/
+  border: 1px solid #e96443;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/***************************
+/***** PROGRESS BAR
+/***************************/
+#progress-container {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center;
+}
+
+#progress {
+  /*height: 16px;*/
+  height: 24px;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 16px;
+  border-radius: 4px;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  /*animation: tick 5s linear;*/
+  /*animation-name: tick;
+  animation-duration: 5s;
+  animation-timing-function: linear;*/
+  display: none;
+}
+
+.progress-bar.runProgress {
+  -webkit-animation: tick 5s linear;
+  -ms-animation: tick 5s linear;
+  -o-animation: tick 5s linear;
+  -moz-animation: tick 5s linear;
+  animation: tick 5s linear;
+  display: block;
+}
+
+@keyframes tick {
+  /* 100% width */
+  0% {
+    width: 100%;
+    background-color: #86e01e;
+  }
+  /* 75% width */
+  25% {
+    width: 75%;
+    background-color: #f2d31b;
+  }
+  /* 50% width */
+  50% {
+    width: 50%;
+    background-color: #f2b01e;
+  }
+  /* 25% width */
+  75% {
+    width: 25%;
+    background-color: #f27011;
+  }
+  /* 5% width */
+  95% {
+    width: 5%;
+    background-color: #f63a0f;
+  }
+  /* 5% width */
+  100% {
+    width: 0%;
+  }
+}
